@@ -23,7 +23,7 @@ export default function Home() {
       <section className="py-24 text-center">
         <h1 className="text-5xl sm:text-7xl font-bold mb-6">
           안녕하세요,{" "}
-          <span className="gradient-text">JG</span>입니다
+          <span className="gradient-text">세상을 바꾸는 유토피아</span>입니다
         </h1>
         <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
           개발과 창작을 좋아하는 사람입니다.
