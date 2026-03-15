@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #0f0f1a;
+  --foreground: #e8e8f0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Colorful card hover */
+.card-colorful {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.card-colorful:hover {
+  border-color: transparent;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(84, 160, 255, 0.1));
+  box-shadow: 0 0 30px rgba(255, 107, 107, 0.15), 0 0 60px rgba(84, 160, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Tag colors */
+.tag {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Prose styles for markdown content */
+.prose {
+  max-width: 72ch;
+  line-height: 1.8;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  color: #fff;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.prose h1 { font-size: 2rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+
+.prose p {
+  margin-bottom: 1.25em;
+  color: #c8c8d8;
+}
+
+.prose a {
+  color: #54a0ff;
+  text-decoration: underline;
+}
+
+.prose code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.prose pre {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.25em;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.25em;
+  color: #c8c8d8;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose blockquote {
+  border-left: 3px solid #ff6b6b;
+  padding-left: 1em;
+  color: #a8a8b8;
+  font-style: italic;
+  margin-bottom: 1.25em;
+}
+
+.prose img {
+  border-radius: 12px;
+  margin: 1.5em 0;
+}
